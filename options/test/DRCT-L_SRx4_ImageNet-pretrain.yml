@@ -8,8 +8,8 @@ datasets:
   test_1:  # the 1st test dataset
     name: Set5
     type: PairedImageDataset
-    dataroot_gt: ./datasets/Set5/GTmod4
-    dataroot_lq: ./datasets/Set5/LRbicx4
+    dataroot_gt: ../Data/Test/HR
+    dataroot_lq: ../Data/Test/LR_4X
     io_backend:
       type: disk
 
@@ -67,7 +67,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: ./experiments/pretrained_models/DRCT-L_SRx4_ImageNet-pretrain.pth
+  pretrain_network_g: ./experiments/pretrained_models/DRCT-L_X4.pth
   strict_load_g: true
   param_key_g: 'params_ema'
 

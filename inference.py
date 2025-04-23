@@ -38,7 +38,7 @@ def main():
     model.eval()
     model = model.to(device)
     
-    print(model)
+    # print(model)
     
     window_size = 16
     
@@ -69,6 +69,7 @@ def main():
             print('Error', error, imgname)
         else:
             # save image
+            print("saving")
             output = output.data.squeeze().float().cpu().clamp_(0, 1).numpy()
             output = np.transpose(output[[2, 1, 0], :, :], (1, 2, 0))
             output = (output * 255.0).round().astype(np.uint8)
